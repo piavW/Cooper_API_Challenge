@@ -14,12 +14,15 @@ gem 'jbuilder', '~> 2.5'
 gem 'rack-cors', require: 'rack/cors'
 
 group :development, :test do
- gem 'pry-rails'
- gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'factory_bot_rails'
 end
 
 group :development do
- gem 'listen', '~> 3.0.5'
- gem 'spring'
- gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'listen', '~> 3.0.5'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
