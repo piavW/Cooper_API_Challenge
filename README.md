@@ -1,13 +1,15 @@
 # README
+# Cooper API Challenge
+Created by: Pia von Wachenfelt & Miyesier Kaerman
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
+## Language and system dependencies
+* Ruby version: 2.6.3
+* System dependencies: 
+- Rails 5.2.0
+- RSpec
+- Shoulda-matchers
+- FactoryBot
+- Rack-Cors
 
 * Configuration
 
@@ -15,10 +17,12 @@ Things you may want to cover:
 
 * Database initialization
 
-* How to run the test suite
-
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## How to run the test suite
+`$ rspec` to run request specs.
 
-* ...
+
+
+## Deployment instructions
+
