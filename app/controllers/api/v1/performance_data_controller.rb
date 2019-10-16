@@ -8,6 +8,11 @@ class Api::V1::PerformanceDataController < ApplicationController
       render json: { error: @data.errors.full_messages }
     end
   end
+  
+  def index
+    @collection = current_api_v1_user.performance_data
+    render json: { entries: @collection }
+  end
 
   private
   def performance_data_params
