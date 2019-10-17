@@ -17,20 +17,18 @@ RSpec.describe Api::V1::PerformanceDataController, type: :request do
   describe 'GET /api/v1/performance_data' do
     before do
       5.times { user.performance_data.create(data: { message: 'Average' }) }
+      get '/api/v1/performance_data', headers: headers
     end
   
     it 'returns a collection of performance data' do
-      get '/api/v1/performance_data', headers: headers
       expect(response_json['entries'].count).to eq 5
     end
 
     it 'retrieves a previously created data entry' do
-      get '/api/v1/performance_data', headers: headers
       expect(response_json['entries'][0]['data']).to eq 'message' => 'Average'
     end
 
     it 'response 200 when retrieveing a previously created data entry' do
-      get '/api/v1/performance_data', headers: headers
       expect(response.status).to eq 200
     end
   end
